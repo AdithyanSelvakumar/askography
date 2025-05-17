@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white hover:bg-white hover:text-black transition-all text-lg rounded-none px-8 py-6"
+                className="border-2 border-white hover:bg-white hover:text-black text-white transition-colors text-lg rounded-none px-8 py-6"
               >
                 {buttonText}
               </Button>

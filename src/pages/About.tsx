@@ -20,7 +20,7 @@ const About: React.FC = () => {
                   About Me
                 </h1>
                 <p className="text-lg text-gray-700 mb-4">
-                  I'm Adithyan S Kumar, an intermediate photographer with a passion for mobile photography. I've developed my skills in capturing compelling visual stories through the lens of my smartphone.
+                  I'm Adithyan S Kumar, an intermediate photographer with a passion for photography. I've developed my skills in capturing compelling visual stories.
                 </p>
                 <div className="flex items-center space-x-4 mt-8">
                   <a 
@@ -85,10 +85,6 @@ const About: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-medium mb-4">Technical Skills</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li className="flex items-center">
-                        <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                        Mobile Photography
-                      </li>
                       <li className="flex items-center">
                         <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
                         Color Grading

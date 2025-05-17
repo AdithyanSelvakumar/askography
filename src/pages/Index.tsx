@@ -35,7 +35,7 @@ const Index: React.FC = () => {
         <Hero 
           title="Adithyan S Kumar"
           subtitle="Capturing life's finest moments"
-          description="Welcome to my photography portfolio - where I transform everyday scenes into memorable visual stories through my mobile photography skills."
+          description="Welcome to my photography portfolio - where I transform everyday scenes into memorable visual stories through my photography skills."
           imageSrc="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1500&q=80"
           altText="Professional camera on tripod at sunset"
         />
@@ -47,7 +47,7 @@ const Index: React.FC = () => {
               <div>
                 <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">About Me</h2>
                 <p className="mb-6 text-gray-700">
-                  I'm Adithyan S Kumar, an intermediate photographer with a passion for capturing the beauty in everyday moments using mobile photography.
+                  I'm Adithyan S Kumar, an intermediate photographer with a passion for capturing the beauty in everyday moments.
                   With an eye for composition and detail, I transform ordinary scenes into compelling visual stories.
                 </p>
                 <p className="mb-8 text-gray-700">
@@ -81,7 +81,7 @@ const Index: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Featured Galleries</h2>
               <p className="max-w-2xl mx-auto text-gray-700">
-                Explore my collection of mobile photography across different themes and discover the stories behind each image.
+                Explore my collection of photography across different themes and discover the stories behind each image.
               </p>
             </div>
             
@@ -121,7 +121,7 @@ const Index: React.FC = () => {
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">About My Photography</h2>
             <p className="max-w-2xl mx-auto mb-8">
-              Passionate about mobile photography and color grading. Learn more about my journey and approach to visual storytelling.
+              Passionate about photography and color grading. Learn more about my journey and approach to visual storytelling.
             </p>
             <Link to="/about">
               <Button 
