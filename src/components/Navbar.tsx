@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="text-xl md:text-2xl font-serif font-semibold">
-            ASKography
+            Adithyan S Kumar
           </Link>
           
           {/* Desktop Navigation */}
@@ -49,7 +49,6 @@ const Navbar: React.FC = () => {
             <NavLink to="/" current={location.pathname === "/"}>Home</NavLink>
             <NavLink to="/gallery" current={location.pathname.startsWith("/gallery")}>Gallery</NavLink>
             <NavLink to="/about" current={location.pathname === "/about"}>About</NavLink>
-            <NavLink to="/contact" current={location.pathname === "/contact"}>Contact</NavLink>
           </div>
           
           {/* Mobile Menu Icon */}
@@ -74,7 +73,6 @@ const Navbar: React.FC = () => {
             <NavLink to="/" current={location.pathname === "/"}>Home</NavLink>
             <NavLink to="/gallery" current={location.pathname.startsWith("/gallery")}>Gallery</NavLink>
             <NavLink to="/about" current={location.pathname === "/about"}>About</NavLink>
-            <NavLink to="/contact" current={location.pathname === "/contact"}>Contact</NavLink>
           </div>
         </div>
       )}

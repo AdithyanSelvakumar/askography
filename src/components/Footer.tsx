@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="text-xl font-serif font-semibold">
-              ASKography
+              Adithyan S Kumar
             </Link>
             <p className="mt-4 text-gray-400 max-w-xs">
-              Capturing life's finest moments through the lens of creativity and passion.
+              Capturing life's finest moments through mobile photography and creative color grading.
             </p>
           </div>
 
@@ -35,11 +35,6 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
                   About
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -94,7 +89,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} ASKography. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Adithyan S Kumar. All rights reserved.</p>
         </div>
       </div>
     </footer>

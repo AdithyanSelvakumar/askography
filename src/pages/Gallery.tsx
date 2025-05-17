@@ -123,10 +123,10 @@ const Gallery: React.FC = () => {
       <main className="min-h-screen pt-16">
         <div className="container mx-auto px-4 md:px-6 py-12">
           <div className="mb-12 text-center">
-            <h1 className="text-4xl md:text-5xl font-serif font-medium mb-4">Photography Portfolio</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-medium mb-4">Gallery</h1>
             <p className="max-w-2xl mx-auto text-gray-700">
-              Browse through my collection of photographs across different categories,
-              each capturing unique moments and perspectives.
+              Browse through my collection of mobile photography across different categories,
+              each enhanced with careful color grading and composition.
             </p>
           </div>
           

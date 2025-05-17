@@ -38,24 +38,24 @@ const Hero: React.FC<HeroProps> = ({
       
       {/* Hero Content */}
       <div className="relative h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center text-white">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 animate-fade-in">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
           {title}
         </h1>
         
         {subtitle && (
-          <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 font-serif max-w-3xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <h2 className="text-xl md:text-2xl lg:text-3xl mb-6 font-serif max-w-3xl">
             {subtitle}
           </h2>
         )}
         
         {description && (
-          <p className="text-base md:text-lg max-w-2xl mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <p className="text-base md:text-lg max-w-2xl mb-8">
             {description}
           </p>
         )}
         
         {showButton && (
-          <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div>
             <Link to={buttonLink}>
               <Button
                 variant="outline"

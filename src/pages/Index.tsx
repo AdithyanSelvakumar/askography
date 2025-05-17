@@ -35,7 +35,7 @@ const Index: React.FC = () => {
         <Hero 
           title="Adithyan S Kumar"
           subtitle="Capturing life's finest moments"
-          description="Welcome to ASKography - where moments become timeless memories through the lens of passion and creativity."
+          description="Welcome to my photography portfolio - where I transform everyday scenes into memorable visual stories through my mobile photography skills."
           imageSrc="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1500&q=80"
           altText="Professional camera on tripod at sunset"
         />
@@ -47,12 +47,12 @@ const Index: React.FC = () => {
               <div>
                 <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">About Me</h2>
                 <p className="mb-6 text-gray-700">
-                  I'm Adithyan S Kumar, a passionate photographer dedicated to capturing the beauty in everyday moments. 
-                  With an eye for detail and composition, I transform ordinary scenes into extraordinary visual stories.
+                  I'm Adithyan S Kumar, an intermediate photographer with a passion for capturing the beauty in everyday moments using mobile photography.
+                  With an eye for composition and detail, I transform ordinary scenes into compelling visual stories.
                 </p>
                 <p className="mb-8 text-gray-700">
-                  Whether it's the raw emotions in portrait photography, the grandeur of landscapes, or the energy of events,
-                  I approach each project with creativity and technical excellence.
+                  I'm particularly interested in color grading techniques that enhance the mood and atmosphere of my photographs,
+                  whether it's landscapes, portraits, or candid moments.
                 </p>
                 <Link to="/about">
                   <Button 
@@ -81,7 +81,7 @@ const Index: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Featured Galleries</h2>
               <p className="max-w-2xl mx-auto text-gray-700">
-                Explore my collection of work across different specializations and discover the stories behind each image.
+                Explore my collection of mobile photography across different themes and discover the stories behind each image.
               </p>
             </div>
             
@@ -116,19 +116,19 @@ const Index: React.FC = () => {
           </div>
         </section>
         
-        {/* Contact CTA */}
+        {/* About CTA - replacing Contact CTA */}
         <section className="py-20 px-4 md:px-6 bg-black text-white">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Let's Work Together</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">About My Photography</h2>
             <p className="max-w-2xl mx-auto mb-8">
-              Ready to capture your special moments? Have a project in mind? Reach out and let's create something amazing together.
+              Passionate about mobile photography and color grading. Learn more about my journey and approach to visual storytelling.
             </p>
-            <Link to="/contact">
+            <Link to="/about">
               <Button 
                 variant="outline" 
                 className="border-white text-white hover:bg-white hover:text-black rounded-none px-8"
               >
-                Get In Touch
+                Learn About Me
               </Button>
             </Link>
           </div>
