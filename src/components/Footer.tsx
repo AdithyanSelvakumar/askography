@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, WhatsApp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               Adithyan S Kumar
             </Link>
             <p className="mt-4 text-gray-400 max-w-xs">
-              Capturing life's finest moments through mobile photography and creative color grading.
+              Capturing life's finest moments through photography and creative color grading.
             </p>
           </div>
 
@@ -69,6 +69,15 @@ const Footer: React.FC = () => {
                 aria-label="Professional Instagram"
               >
                 <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://wa.me/919744351138" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="WhatsApp"
+              >
+                <WhatsApp className="w-5 h-5" />
               </a>
               <a 
                 href="#" 

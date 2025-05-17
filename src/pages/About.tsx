@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Separator } from '@/components/ui/separator';
-import { PhoneCall, Mail, Instagram } from 'lucide-react';
+import { PhoneCall, Mail, Instagram, WhatsApp } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -39,6 +39,15 @@ const About: React.FC = () => {
                     className="text-black hover:text-gray-700 transition-colors"
                   >
                     Professional Instagram
+                  </a>
+                  <span className="text-gray-300">|</span>
+                  <a 
+                    href="https://wa.me/919744351138" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-black hover:text-gray-700 transition-colors"
+                  >
+                    WhatsApp
                   </a>
                 </div>
               </div>
@@ -120,6 +129,16 @@ const About: React.FC = () => {
                       <h3 className="text-xl font-medium mb-1">Email</h3>
                       <a href="mailto:adiskkunnil04@gmail.com" className="text-gray-700 hover:underline">
                         adiskkunnil04@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <WhatsApp className="w-5 h-5 text-black mt-1" />
+                    <div>
+                      <h3 className="text-xl font-medium mb-1">WhatsApp</h3>
+                      <a href="https://wa.me/919744351138" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">
+                        +91 9744351138
                       </a>
                     </div>
                   </div>
