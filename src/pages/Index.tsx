@@ -1,13 +1,142 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import React from 'react';
+import Hero from '@/components/Hero';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+
+// Sample data for the home page
+const categories = [
+  { 
+    name: 'Nature', 
+    image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
+    link: '/gallery/nature'
+  },
+  { 
+    name: 'Portraits', 
+    image: 'https://images.unsplash.com/photo-1511551203524-9a24350a5771?auto=format&fit=crop&w=800&q=80',
+    link: '/gallery/portraits'
+  },
+  { 
+    name: 'Events', 
+    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+    link: '/gallery/events'
+  }
+];
+
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      
+      <main>
+        {/* Hero Section */}
+        <Hero 
+          title="Adithyan S Kumar"
+          subtitle="Capturing life's finest moments"
+          description="Welcome to ASKography - where moments become timeless memories through the lens of passion and creativity."
+          imageSrc="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1500&q=80"
+          altText="Professional camera on tripod at sunset"
+        />
+        
+        {/* About Preview Section */}
+        <section className="py-20 px-4 md:px-6 bg-white">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">About Me</h2>
+                <p className="mb-6 text-gray-700">
+                  I'm Adithyan S Kumar, a passionate photographer dedicated to capturing the beauty in everyday moments. 
+                  With an eye for detail and composition, I transform ordinary scenes into extraordinary visual stories.
+                </p>
+                <p className="mb-8 text-gray-700">
+                  Whether it's the raw emotions in portrait photography, the grandeur of landscapes, or the energy of events,
+                  I approach each project with creativity and technical excellence.
+                </p>
+                <Link to="/about">
+                  <Button 
+                    variant="outline" 
+                    className="border-black text-black hover:bg-black hover:text-white rounded-none"
+                  >
+                    Learn More About Me
+                  </Button>
+                </Link>
+              </div>
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" 
+                  alt="Photographer at work"
+                  className="w-full shadow-lg rounded-lg"
+                />
+                <div className="absolute inset-0 border-8 border-white transform translate-x-4 translate-y-4 -z-10 rounded-lg"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Gallery Preview */}
+        <section className="py-20 px-4 md:px-6 bg-gray-50">
+          <div className="container mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Featured Galleries</h2>
+              <p className="max-w-2xl mx-auto text-gray-700">
+                Explore my collection of work across different specializations and discover the stories behind each image.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {categories.map((category, index) => (
+                <Link 
+                  key={index} 
+                  to={category.link}
+                  className="group block relative overflow-hidden h-80 rounded-lg shadow-md"
+                >
+                  <img 
+                    src={category.image} 
+                    alt={`${category.name} photography`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                    <h3 className="text-white text-2xl font-serif">{category.name}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link to="/gallery">
+                <Button 
+                  className="bg-black text-white hover:bg-black/80 rounded-none"
+                >
+                  View All Galleries
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+        
+        {/* Contact CTA */}
+        <section className="py-20 px-4 md:px-6 bg-black text-white">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Let's Work Together</h2>
+            <p className="max-w-2xl mx-auto mb-8">
+              Ready to capture your special moments? Have a project in mind? Reach out and let's create something amazing together.
+            </p>
+            <Link to="/contact">
+              <Button 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-black rounded-none px-8"
+              >
+                Get In Touch
+              </Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   );
 };
 
