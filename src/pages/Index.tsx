@@ -57,7 +57,7 @@ const Index: React.FC = () => {
                 <Link to="/about">
                   <Button 
                     variant="outline" 
-                    className="bg-transparent border-black text-black hover:bg-black hover:text-white rounded-none"
+                    className="bg-black text-white border-black rounded-md"
                   >
                     Learn More About Me
                   </Button>
@@ -126,7 +126,7 @@ const Index: React.FC = () => {
             <Link to="/about">
               <Button 
                 variant="outline" 
-                className="bg-transparent border-white text-white hover:bg-white hover:text-black rounded-none px-8"
+                className="bg-white text-black border-white rounded-md px-8"
               >
                 Learn About Me
               </Button>

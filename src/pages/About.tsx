@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Separator } from '@/components/ui/separator';
-import { PhoneCall, Mail, Instagram, WhatsApp } from 'lucide-react';
+import { PhoneCall, Mail, Instagram, MessageCirclePlus } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -134,7 +134,7 @@ const About: React.FC = () => {
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <WhatsApp className="w-5 h-5 text-black mt-1" />
+                    <MessageCirclePlus className="w-5 h-5 text-black mt-1" />
                     <div>
                       <h3 className="text-xl font-medium mb-1">WhatsApp</h3>
                       <a href="https://wa.me/919744351138" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:underline">

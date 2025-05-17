@@ -1,15 +1,15 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, WhatsApp } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, MessageCirclePlus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white py-12">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
-          <div>
+          <div className="flex flex-col items-center">
             <Link to="/" className="text-xl font-serif font-semibold">
               Adithyan S Kumar
             </Link>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-serif mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -41,9 +41,9 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Contact & Social */}
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-serif mb-4">Contact</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center">
               <li className="text-gray-400">
                 <span className="font-medium">Email:</span> adiskkunnil04@gmail.com
               </li>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
                 <span className="font-medium">Phone:</span> +91 9744351138
               </li>
             </ul>
-            <div className="mt-6 flex space-x-4">
+            <div className="mt-6 flex space-x-4 justify-center">
               <a 
                 href="https://www.instagram.com/_adi._.sk_" 
                 target="_blank" 
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="WhatsApp"
               >
-                <WhatsApp className="w-5 h-5" />
+                <MessageCirclePlus className="w-5 h-5" />
               </a>
               <a 
                 href="#" 
