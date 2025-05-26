@@ -108,6 +108,40 @@ const photos: Photo[] = [
     date: 'December 5, 2023',
     src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80',
   },
+  
+  // Random category
+  {
+    id: 'r1',
+    title: 'Creative Workspace',
+    category: 'Random',
+    description: 'Modern laptop setup with creative workspace vibes',
+    date: 'January 10, 2024',
+    src: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'r2',
+    title: 'Tech Minimalism',
+    category: 'Random',
+    description: 'Clean and minimal laptop on white background',
+    date: 'February 5, 2024',
+    src: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'r3',
+    title: 'Digital Circuits',
+    category: 'Random',
+    description: 'Macro photography of intricate circuit board patterns',
+    date: 'March 18, 2024',
+    src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 'r4',
+    title: 'Code & Coffee',
+    category: 'Random',
+    description: 'Programming session with Java code on monitor',
+    date: 'April 25, 2024',
+    src: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80',
+  },
 ];
 
 const Gallery: React.FC = () => {
@@ -115,6 +149,7 @@ const Gallery: React.FC = () => {
   const naturePhotos = photos.filter(photo => photo.category === 'Nature');
   const portraitPhotos = photos.filter(photo => photo.category === 'Portraits');
   const eventPhotos = photos.filter(photo => photo.category === 'Events');
+  const randomPhotos = photos.filter(photo => photo.category === 'Random');
   
   return (
     <>
@@ -137,6 +172,7 @@ const Gallery: React.FC = () => {
                 <TabsTrigger value="nature">Nature</TabsTrigger>
                 <TabsTrigger value="portraits">Portraits</TabsTrigger>
                 <TabsTrigger value="events">Events</TabsTrigger>
+                <TabsTrigger value="random">Random</TabsTrigger>
               </TabsList>
             </div>
             
@@ -154,6 +190,10 @@ const Gallery: React.FC = () => {
             
             <TabsContent value="events" className="mt-8">
               <PhotoGrid photos={eventPhotos} />
+            </TabsContent>
+            
+            <TabsContent value="random" className="mt-8">
+              <PhotoGrid photos={randomPhotos} />
             </TabsContent>
           </Tabs>
         </div>
