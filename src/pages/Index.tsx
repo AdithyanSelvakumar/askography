@@ -65,8 +65,8 @@ const Index: React.FC = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" 
-                  alt="Photographer at work"
+                  src="src/pages/images/adisk.jpg" 
+                  alt="Adithyan Selvakumar"
                   className="w-full shadow-lg rounded-lg"
                 />
                 <div className="absolute inset-0 border-8 border-white transform translate-x-4 translate-y-4 -z-10 rounded-lg"></div>
