@@ -54,7 +54,7 @@ const About: React.FC = () => {
               <div className="order-1 md:order-2">
                 <div className="relative">
                   <img 
-                    src="https://github.com/AdithyanSelvakumar/askography-showcase-site/src/pages/adisk.jpg" 
+                    src="src/pages/adisk.jpg" 
                     alt="Adithyan S Kumar, Photographer" 
                     className="rounded-lg shadow-lg max-w-full"
                   />
