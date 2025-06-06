@@ -24,6 +24,17 @@ const Hero: React.FC<HeroProps> = ({
   buttonLink = "/gallery",
   altText = "Hero image"
 }) => {
+  const handleImageError = () => {
+    console.error('Failed to load hero image:', imageSrc);
+  };
+
+  const handleImageLoad = () => {
+    console.log('Hero image loaded successfully:', imageSrc);
+  };
+
+  // Log the image source being used
+  console.log('Hero component imageSrc prop:', imageSrc);
+
   return (
     <div className="relative w-full h-screen">
       {/* Hero Image with Overlay */}
@@ -32,6 +43,8 @@ const Hero: React.FC<HeroProps> = ({
           src={imageSrc} 
           alt={altText}
           className="w-full h-full object-cover" 
+          onError={handleImageError}
+          onLoad={handleImageLoad}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
       </div>
