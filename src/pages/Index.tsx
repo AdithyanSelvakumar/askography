@@ -35,7 +35,7 @@ const Index: React.FC = () => {
         <Hero 
           title="Adithyan S Kumar"
           description="Welcome to my photography portfolio - where I transform everyday scenes into memorable visual stories through my photography skills."
-          Src="/mainback.jpg"
+          src="/mainback.jpg"
           altText="Professional camera on tripod at sunset"
         />
         
