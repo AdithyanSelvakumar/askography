@@ -64,7 +64,7 @@ const Index: React.FC = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="src/pages/images/adisk.jpg" 
+                  src="/adisk.jpg" 
                   alt="Adithyan Selvakumar"
                   className="w-full shadow-lg rounded-lg"
                 />
