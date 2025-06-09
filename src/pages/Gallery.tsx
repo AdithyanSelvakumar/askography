@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -75,14 +74,14 @@ const photos: Photo[] = [
     src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80',
   },
   
-  // Events category
+  // Events category - Updated to use your local images
   {
     id: 'e1',
     title: 'Wedding Celebration',
     category: 'Events',
     description: 'Joyful moment from wedding reception celebration',
     date: 'September 8, 2023',
-    src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80',
+    src: '/images/events/eIMG20241018182300 (1).jpg',
   },
   {
     id: 'e2',
@@ -90,7 +89,7 @@ const photos: Photo[] = [
     category: 'Events',
     description: 'Professional networking event at downtown venue',
     date: 'October 15, 2023',
-    src: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80',
+    src: '/images/events/eIMG_3253 (2).jpg',
   },
   {
     id: 'e3',
@@ -98,7 +97,7 @@ const photos: Photo[] = [
     category: 'Events',
     description: 'Live concert with dramatic stage lighting',
     date: 'November 22, 2023',
-    src: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80',
+    src: '/images/events/eIMG_3360 (4).jpg',
   },
   {
     id: 'e4',
@@ -106,7 +105,95 @@ const photos: Photo[] = [
     category: 'Events',
     description: 'University graduation ceremony with proud graduates',
     date: 'December 5, 2023',
-    src: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80',
+    src: '/images/events/eIMG_8263x.jpg',
+  },
+  {
+    id: 'e5',
+    title: 'Special Event',
+    category: 'Events',
+    description: 'Memorable moments captured during special occasion',
+    date: 'January 10, 2024',
+    src: '/images/events/eIMG_8303x.jpg',
+  },
+  {
+    id: 'e6',
+    title: 'Community Gathering',
+    category: 'Events',
+    description: 'Local community event with great atmosphere',
+    date: 'February 14, 2024',
+    src: '/images/events/eIMG_8317x.jpg',
+  },
+  {
+    id: 'e7',
+    title: 'Cultural Festival',
+    category: 'Events',
+    description: 'Vibrant cultural celebration with traditional elements',
+    date: 'March 20, 2024',
+    src: '/images/events/eIMG_8386x.jpg',
+  },
+  {
+    id: 'e8',
+    title: 'Awards Ceremony',
+    category: 'Events',
+    description: 'Recognition ceremony celebrating achievements',
+    date: 'April 12, 2024',
+    src: '/images/events/eIMG_8432x.jpg',
+  },
+  {
+    id: 'e9',
+    title: 'Exhibition Opening',
+    category: 'Events',
+    description: 'Art exhibition opening with distinguished guests',
+    date: 'May 8, 2024',
+    src: '/images/events/exIMG_0708 (1).jpg',
+  },
+  {
+    id: 'e10',
+    title: 'Conference Day',
+    category: 'Events',
+    description: 'Professional conference with industry leaders',
+    date: 'June 15, 2024',
+    src: '/images/events/exIMG_0765 (2).jpg',
+  },
+  {
+    id: 'e11',
+    title: 'Charity Gala',
+    category: 'Events',
+    description: 'Elegant charity fundraising event',
+    date: 'July 22, 2024',
+    src: '/images/events/exIMG_3992.jpg',
+  },
+  {
+    id: 'e12',
+    title: 'Product Launch',
+    category: 'Events',
+    description: 'Exciting product launch presentation',
+    date: 'August 30, 2024',
+    src: '/images/events/exIMG_4149 (1).jpg',
+  },
+  {
+    id: 'e13',
+    title: 'Team Building',
+    category: 'Events',
+    description: 'Corporate team building activities',
+    date: 'September 18, 2024',
+    src: '/images/events/exIMG_4178.jpg',
+  },
+  {
+    id: 'e14',
+    title: 'Holiday Celebration',
+    category: 'Events',
+    description: 'Festive holiday gathering with decorations',
+    date: 'October 25, 2024',
+    src: '/images/events/exIMG_4253.jpg',
+  },
+  {
+    id: 'e15',
+    title: 'Anniversary Event',
+    category: 'Events',
+    description: 'Milestone anniversary celebration',
+    date: 'November 12, 2024',
+    src: '/images/events/exIMG_4306.jpg',
   },
   
   // Random category
