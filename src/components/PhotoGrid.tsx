@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export interface Photo {
@@ -44,6 +43,10 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
     setCurrentIndex(nextIndex);
   };
 
+  const handleImageError = (photoId: string) => {
+    console.error(`Failed to load image for photo ID: ${photoId}`);
+  };
+
   return (
     <>
       <div className="photo-grid">
@@ -58,6 +61,8 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
               alt={photo.title} 
               className="w-full h-full object-cover"
               loading="lazy"
+              onError={() => handleImageError(photo.id)}
+              onLoad={() => console.log(`Image loaded successfully: ${photo.id}`)}
             />
             <div className="category-badge">
               {photo.category}
@@ -73,6 +78,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
               src={selectedPhoto.src} 
               alt={selectedPhoto.title} 
               className="lightbox-image"
+              onError={() => handleImageError(selectedPhoto.id)}
             />
             <div className="lightbox-caption">
               <h3 className="text-xl font-serif mb-2">{selectedPhoto.title}</h3>

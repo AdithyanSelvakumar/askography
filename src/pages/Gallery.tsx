@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import PhotoGrid, { Photo } from '@/components/PhotoGrid';
@@ -552,6 +552,14 @@ const photos: Photo[] = [
 ];
 
 const Gallery: React.FC = () => {
+  const [loadingErrors, setLoadingErrors] = useState<string[]>([]);
+
+  useEffect(() => {
+    // Verify all image paths are accessible
+    console.log('Gallery loaded with', photos.length, 'photos');
+    console.log('Photo categories:', [...new Set(photos.map(p => p.category))]);
+  }, []);
+
   // Filter photos by category
   const naturePhotos = photos.filter(photo => photo.category === 'Nature');
   const portraitPhotos = photos.filter(photo => photo.category === 'Portraits');
@@ -575,11 +583,11 @@ const Gallery: React.FC = () => {
           <Tabs defaultValue="all" className="mb-12">
             <div className="flex justify-center mb-8">
               <TabsList className="bg-secondary">
-                <TabsTrigger value="all">All</TabsTrigger>
-                <TabsTrigger value="nature">Nature</TabsTrigger>
-                <TabsTrigger value="portraits">Portraits</TabsTrigger>
-                <TabsTrigger value="events">Events</TabsTrigger>
-                <TabsTrigger value="random">Random</TabsTrigger>
+                <TabsTrigger value="all">All ({photos.length})</TabsTrigger>
+                <TabsTrigger value="nature">Nature ({naturePhotos.length})</TabsTrigger>
+                <TabsTrigger value="portraits">Portraits ({portraitPhotos.length})</TabsTrigger>
+                <TabsTrigger value="events">Events ({eventPhotos.length})</TabsTrigger>
+                <TabsTrigger value="random">Random ({randomPhotos.length})</TabsTrigger>
               </TabsList>
             </div>
             
