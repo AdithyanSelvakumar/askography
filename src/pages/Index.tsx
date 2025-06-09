@@ -11,17 +11,17 @@ const categories = [
   { 
     name: 'Nature', 
     image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
-    link: '/gallery'
+    link: '/gallery/nature'
   },
   { 
     name: 'Portraits', 
     image: 'https://images.unsplash.com/photo-1511551203524-9a24350a5771?auto=format&fit=crop&w=800&q=80',
-    link: '/gallery'
+    link: '/gallery/portraits'
   },
   { 
     name: 'Events', 
     image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
-    link: '/gallery'
+    link: '/gallery/event'
   }
 ];
 
