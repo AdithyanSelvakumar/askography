@@ -10,22 +10,22 @@ import Navbar from '@/components/Navbar';
 const categories = [
   { 
     name: 'Nature', 
-    image: '/images/nature/nIMG20240630165238 (1).jpg',
+    image: '/images/nature/nwIMG_8580.jpg',
     link: '/gallery#nature',
   },
   { 
     name: 'Portraits', 
-    image: '/images/portraits/pIMG_1102 (1).jpg',
+    image: '/images/portraits/qIMG_8375 (1).jpg',
     link: '/gallery#portraits',
   },
   { 
     name: 'Events', 
-    image: '/images/events/eIMG20241018182300 (1).jpg',
+    image: '/images/events/eIMG_8303x.jpg',
     link: '/gallery#events',
   },
   { 
     name: 'Random', 
-    image: '/images/random/rIMG20240804122125 (1).jpg',
+    image: '/images/random/rIMG_2170 (1).jpg',
     link: '/gallery#random',
   }
 ];
