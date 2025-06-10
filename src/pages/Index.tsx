@@ -6,22 +6,22 @@ import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-// Sample data for the home page
+// Sample data for the home page - Updated to use local images
 const categories = [
   { 
     name: 'Nature', 
-    image: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
-    link: '/gallery/Nature',
+    image: '/images/nature/nIMG20240630165238 (1).jpg',
+    link: '/gallery',
   },
   { 
     name: 'Portraits', 
-    image: 'https://images.unsplash.com/photo-1511551203524-9a24350a5771?auto=format&fit=crop&w=800&q=80',
-    link: '/gallery/Portraits',
+    image: '/images/portraits/pIMG_1102 (1).jpg',
+    link: '/gallery',
   },
   { 
     name: 'Events', 
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
-    link: '/gallery/Event',
+    image: '/images/events/eIMG20241018182300 (1).jpg',
+    link: '/gallery',
   }
 ];
 
@@ -95,6 +95,12 @@ const Index: React.FC = () => {
                     src={category.image} 
                     alt={`${category.name} photography`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      console.error(`Failed to load featured gallery image: ${category.image}`);
+                      // Fallback to a placeholder if image fails to load
+                      e.currentTarget.src = 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?auto=format&fit=crop&w=800&q=80';
+                    }}
+                    onLoad={() => console.log(`Featured gallery image loaded: ${category.image}`)}
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                     <h3 className="text-white text-2xl font-serif">{category.name}</h3>
