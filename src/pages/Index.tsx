@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-// Sample data for the home page - Updated to use local images and specific tab links
+// Sample data for the home page - Updated to use correct local image paths
 const categories = [
   { 
     name: 'Nature', 
