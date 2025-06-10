@@ -6,22 +6,27 @@ import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-// Sample data for the home page - Updated to use local images
+// Sample data for the home page - Updated to use local images and specific tab links
 const categories = [
   { 
     name: 'Nature', 
     image: '/images/nature/nIMG20240630165238 (1).jpg',
-    link: '/gallery',
+    link: '/gallery#nature',
   },
   { 
     name: 'Portraits', 
     image: '/images/portraits/pIMG_1102 (1).jpg',
-    link: '/gallery',
+    link: '/gallery#portraits',
   },
   { 
     name: 'Events', 
     image: '/images/events/eIMG20241018182300 (1).jpg',
-    link: '/gallery',
+    link: '/gallery#events',
+  },
+  { 
+    name: 'Random', 
+    image: '/images/random/rIMG20240804122125 (1).jpg',
+    link: '/gallery#random',
   }
 ];
 
@@ -84,7 +89,7 @@ const Index: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {categories.map((category, index) => (
                 <Link 
                   key={index} 

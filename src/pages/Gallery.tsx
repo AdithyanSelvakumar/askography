@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -553,8 +554,15 @@ const photos: Photo[] = [
 
 const Gallery: React.FC = () => {
   const [loadingErrors, setLoadingErrors] = useState<string[]>([]);
+  const [activeTab, setActiveTab] = useState('all');
 
   useEffect(() => {
+    // Handle hash-based navigation to specific tabs
+    const hash = window.location.hash.replace('#', '');
+    if (hash && ['nature', 'portraits', 'events', 'random'].includes(hash)) {
+      setActiveTab(hash);
+    }
+    
     // Verify all image paths are accessible
     console.log('Gallery loaded with', photos.length, 'photos');
     console.log('Photo categories:', [...new Set(photos.map(p => p.category))]);
@@ -580,7 +588,7 @@ const Gallery: React.FC = () => {
             </p>
           </div>
           
-          <Tabs defaultValue="all" className="mb-12">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-12">
             <div className="flex justify-center mb-8">
               <TabsList className="bg-secondary">
                 <TabsTrigger value="all">All ({photos.length})</TabsTrigger>
