@@ -15,7 +15,7 @@ const categories = [
   },
   { 
     name: 'Portraits', 
-    image: '/images/portraits/qIMG_8375 (1).jpg',
+    image: '/images/portraits/pxIMG_9495 (2).jpg',
     link: '/gallery#portraits',
   },
   { 
@@ -25,7 +25,7 @@ const categories = [
   },
   { 
     name: 'Random', 
-    image: '/images/random/rIMG_2170 (1).jpg',
+    image: '/images/random/rIMG_8055 (2).jpg',
     link: '/gallery#random',
   }
 ];
