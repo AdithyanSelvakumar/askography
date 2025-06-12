@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from '@/components/Hero';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,7 @@ const categories = [
   },
   { 
     name: 'Portraits', 
-    image: '/images/portraits/pxIMG_9542x (2).jpg',
+    image: '/images/portraits/pxIMG_9542x%20(2).jpg',
     link: '/gallery#portraits',
   },
   { 
@@ -25,7 +24,7 @@ const categories = [
   },
   { 
     name: 'Random', 
-    image: '/images/random/rIMG_2170 (1).jpg',
+    image: '/images/random/rIMG_2170%20(1).jpg',
     link: '/gallery#random',
   }
 ];
