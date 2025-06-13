@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 export interface Photo {
   id: string;
@@ -44,7 +45,7 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
   };
 
   const handleImageError = (photoId: string) => {
-    console.error(`Failed to load image for photo ID: ${photoId}`);
+    console.warn(`Image failed to load: ${photoId}`);
   };
 
   return (
@@ -56,13 +57,11 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
             className="photo-item rounded-md overflow-hidden shadow-md cursor-pointer"
             onClick={() => openLightbox(photo, index)}
           >
-            <img 
-              src={photo.thumbnail || photo.src} 
-              alt={photo.title} 
-              className="w-full h-full object-cover"
-              loading="lazy"
+            <LazyImage
+              src={photo.thumbnail || photo.src}
+              alt={photo.title || `${photo.category} photo`}
+              className="w-full h-full"
               onError={() => handleImageError(photo.id)}
-              onLoad={() => console.log(`Image loaded successfully: ${photo.id}`)}
             />
             <div className="category-badge">
               {photo.category}
@@ -74,9 +73,9 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({ photos }) => {
       {selectedPhoto && (
         <div className="lightbox" onClick={closeLightbox}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <img 
-              src={selectedPhoto.src} 
-              alt={selectedPhoto.title} 
+            <LazyImage
+              src={selectedPhoto.src}
+              alt={selectedPhoto.title || `${selectedPhoto.category} photo`}
               className="lightbox-image"
               onError={() => handleImageError(selectedPhoto.id)}
             />

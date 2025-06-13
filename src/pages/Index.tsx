@@ -1,11 +1,14 @@
+
 import React from 'react';
 import Hero from '@/components/Hero';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ErrorBoundary from '@/components/ErrorBoundary';
+import LazyImage from '@/components/LazyImage';
 
-// Sample data for the home page - Updated to use correct local image paths
+// Sample data for the home page
 const categories = [
   { 
     name: 'Nature', 
@@ -31,7 +34,7 @@ const categories = [
 
 const Index: React.FC = () => {
   return (
-    <>
+    <ErrorBoundary>
       <Navbar />
       
       <main>
@@ -67,7 +70,7 @@ const Index: React.FC = () => {
                 </Link>
               </div>
               <div className="relative">
-                <img 
+                <LazyImage 
                   src="/adisk.jpg" 
                   alt="Adithyan Selvakumar"
                   className="w-full shadow-lg rounded-lg"
@@ -95,16 +98,11 @@ const Index: React.FC = () => {
                   to={category.link}
                   className="group block relative overflow-hidden h-80 rounded-lg shadow-md"
                 >
-                  <img 
-                    src={category.image} 
+                  <LazyImage
+                    src={category.image}
                     alt={`${category.name} photography`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      console.error(`Failed to load featured gallery image: ${category.image}`);
-                      // Fallback to a placeholder if image fails to load
-                      e.currentTarget.src = 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?auto=format&fit=crop&w=800&q=80';
-                    }}
-                    onLoad={() => console.log(`Featured gallery image loaded: ${category.image}`)}
+                    className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+                    onError={() => console.warn(`Failed to load featured gallery image: ${category.image}`)}
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                     <h3 className="text-white text-2xl font-serif">{category.name}</h3>
@@ -125,7 +123,7 @@ const Index: React.FC = () => {
           </div>
         </section>
         
-        {/* About CTA - replacing Contact CTA */}
+        {/* About CTA */}
         <section className="py-20 px-4 md:px-6 bg-black text-white">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">About My Photography</h2>
@@ -145,7 +143,7 @@ const Index: React.FC = () => {
       </main>
       
       <Footer />
-    </>
+    </ErrorBoundary>
   );
 };
 
