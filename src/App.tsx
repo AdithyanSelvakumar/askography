@@ -12,13 +12,16 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Get the basename from the current environment
+const basename = import.meta.env.PROD ? "/askography" : "";
+
 const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/askography">
+        <BrowserRouter basename={basename}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/gallery" element={<Gallery />} />
