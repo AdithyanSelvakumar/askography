@@ -40,9 +40,10 @@ const Index: React.FC = () => {
       <main>
         {/* Hero Section */}
         <Hero 
-          title="Adithyan S Kumar"
-          description="Welcome to my photography portfolio - where I transform everyday scenes into memorable visual stories through my photography skills."
-          <img src="./backDrop.jpg" alt="Bulbul at kollam thenmala" />
+           title="Adithyan S Kumar"
+           description="Welcome to my photography portfolio - where I transform everyday scenes into memorable visual stories through my photography skills."
+         />
+         <img src="./backDrop.jpg" alt="Bulbul at kollam thenmala" />
         
         {/* About Preview Section */}
         <section className="py-20 px-4 md:px-6 bg-white">
