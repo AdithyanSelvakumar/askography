@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -12,23 +11,23 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === 'production' ? "/askography/" : "/",
+  // Use "/askography/" as the base in production mode
+  base: mode === "production" ? "/askography/" : "/",
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
+    outDir: "dist", // Output directory for the build
+    assetsDir: "assets", // Directory for static assets
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        manualChunks: undefined, // Avoid splitting files unnecessarily
       },
     },
   },
-  publicDir: 'public',
+  publicDir: "public", // Directory for static assets like images
 }));
