@@ -21,4 +21,13 @@ export default defineConfig(({ mode }) => ({
     },
   },
   base: mode === 'production' ? "/askography/" : "/",
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 }));
