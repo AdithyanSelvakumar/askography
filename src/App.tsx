@@ -12,7 +12,6 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Get the basename from the current environment
 const basename = import.meta.env.PROD ? "/askography" : "";
 
 const App = () => (
